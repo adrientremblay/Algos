@@ -1,7 +1,6 @@
 package ch1ArraysAndStrings;
 
 public class PalindromePermutation {
-
     public boolean arraySolution(String str) {
         int history[] = new int[256];
 
@@ -20,6 +19,22 @@ public class PalindromePermutation {
         }
 
         return true;
+    }
+
+    public boolean bitVectorSolution(String str) {
+        // I gave up
+
+        /*
+        int history = 0;
+
+        for (char c : str.toCharArray()) {
+            history |= (c - 'a');
+        }
+
+        int complement = 1 - history;
+
+        return (history && complement == 0)
+         */
     }
 
     public static void main(String args[]) {
