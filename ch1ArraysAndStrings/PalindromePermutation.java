@@ -35,6 +35,7 @@ public class PalindromePermutation {
 
         return (history && complement == 0)
          */
+        return false;
     }
 
     public static void main(String args[]) {
