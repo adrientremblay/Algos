@@ -1,4 +1,4 @@
-package ch1ArraysAndStrings;
+package ch1_arrays_and_strings;
 
 public class URLify {
     public void twoPointerSolution(char[] s, int trueLen) {

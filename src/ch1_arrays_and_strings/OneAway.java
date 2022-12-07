@@ -1,4 +1,4 @@
-package ch1ArraysAndStrings;
+package ch1_arrays_and_strings;
 
 public class OneAway {
     public boolean mySolution(String s1, String s2) {
