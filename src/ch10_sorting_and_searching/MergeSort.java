@@ -10,6 +10,9 @@ public class MergeSort {
 	}
 	
 	private void mergesort(int[] arr, int start, int end) {
+		if (start == end)
+			return;
+		
 		if (start + 1 == end) {
 			if (arr[start] > arr[end]) {
 				int tmp = arr[end];
@@ -53,7 +56,7 @@ public class MergeSort {
 	}
 	
 	public static void main(String args[]) {
-		int[] testArr = {6,3,6,5};
+		int[] testArr = {6,3,9,6,5};
 		MergeSort mergeSort = new MergeSort();
 		mergeSort.sort(testArr);
 		
