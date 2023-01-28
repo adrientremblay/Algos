@@ -1,6 +1,6 @@
 package ch10_sorting_and_searching;
 
-public class BubbleSort {
+public class BubbleSort implements SortingAlgo {
 	public BubbleSort() {
 		
 	}
