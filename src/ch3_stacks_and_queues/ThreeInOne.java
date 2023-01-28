@@ -1,5 +1,6 @@
 package ch3_stacks_and_queues;
 
+// todo: is this working? check later because right now I just can't be bothered
 // no generic T this time because cannot create arrays of generics
 public class ThreeInOne {
 	private int[] array;
