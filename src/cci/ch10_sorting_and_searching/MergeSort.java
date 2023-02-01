@@ -1,6 +1,6 @@
 package ch10_sorting_and_searching;
 
-public class MergeSort {
+public class MergeSort implements SortingAlgo {
 	public MergeSort() {
 		
 	}

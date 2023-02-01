@@ -1,6 +1,6 @@
 package ch10_sorting_and_searching;
 
-public class CountingSort {
+public class CountingSort  implements SortingAlgo {
 	private int n;
 
 	// For counting sort, we must assume that the numbers are within 

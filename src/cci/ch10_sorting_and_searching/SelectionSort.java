@@ -1,6 +1,6 @@
 package ch10_sorting_and_searching;
 
-public class SelectionSort {
+public class SelectionSort implements SortingAlgo {
 	public SelectionSort() {
 		
 	}
