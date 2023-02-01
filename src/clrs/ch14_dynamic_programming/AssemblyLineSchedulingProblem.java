@@ -1,4 +1,4 @@
-package src.clrs;
+package src.clrs.ch14_dynamic_programming;
 
 /**
  *
@@ -40,7 +40,7 @@ public class AssemblyLineSchedulingProblem {
         }
 
         int fastestWayCost = Math.min(f[0][n-1] + x[0], f[1][n-1] + x[1]);
-        return fastestWayCost;
+        return fastestWayCost; // todo: also keep track of and save s[] the path taken
     }
 
     public static void main(String args[]) throws Exception {
