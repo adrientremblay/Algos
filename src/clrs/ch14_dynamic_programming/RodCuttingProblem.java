@@ -3,6 +3,8 @@ package clrs.ch14_dynamic_programming;
 import java.util.HashMap;
 import java.util.Timer;
 
+// todo: version that returns array of cut locations
+
 public class RodCuttingProblem {
 	public int naiveSolution(int prices[], int length) {
 		if (length == 0)
