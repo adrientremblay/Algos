@@ -36,6 +36,30 @@ public class MatrixChainMultiplication {
 		}
 		return best;
 	}
+
+	public static int memoizedTopDownSolutionExtended(int[][] matrices, int i, int j, int[][] history, int[][] parenthesisLocations) {
+		if (i == j)
+			return 0;
+		
+		if (i + 1 == j)
+			return matrices[i][0] * matrices[i][1] * matrices[j][1];
+		
+		if (history[i][j] != 0)
+			return history[i][j];
+		
+		int best = Integer.MAX_VALUE;
+		for (int k = i ; k <= j-1 ; k++) {
+			int cost = naiveTopDownSolution(matrices, i, k) 
+					+ naiveTopDownSolution(matrices, k+1, j) 
+					+ (matrices[i][0] * matrices[k][1] * matrices[j][1]);
+			if (cost < best){
+				best = cost;
+				parenthesisLocations[i][j] = k;
+			}
+		}
+		history[i][j] = best;
+		return best;
+	}
 	
 	public static void printParenthesisLocations(int[][] parenthesisLocations, int i , int j) {
 		if (i == j) {
@@ -66,9 +90,10 @@ public class MatrixChainMultiplication {
 			{20, 10}
 		};
 		
+		int[][] history = new int[5][5];
 		int[][] parenthesisLocations = new int[5][5];
 		
-		int ans = naiveTopDownSolutionExtended(sampleMatrices, 0, 4, parenthesisLocations);
+		int ans = memoizedTopDownSolutionExtended(sampleMatrices, 0, 4, history, parenthesisLocations);
 		System.out.println(ans);
 		
 		printParenthesisLocations(parenthesisLocations, 0, 4);
