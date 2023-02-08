@@ -1,4 +1,4 @@
-package ch10_sorting_and_searching;
+package cci.ch10_sorting_and_searching;
 
 public class CountingSort  implements SortingAlgo {
 	private int n;

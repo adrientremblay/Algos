@@ -1,4 +1,4 @@
-package src.clrs.ch14_dynamic_programming;
+package clrs.ch14_dynamic_programming;
 
 public class LongestCommonSubsequence {
     public int lcsLength(String s1, String s2) throws Exception {

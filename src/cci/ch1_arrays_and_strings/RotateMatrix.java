@@ -1,4 +1,4 @@
-package ch1_arrays_and_strings;
+package cci.ch1_arrays_and_strings;
 
 public class RotateMatrix {
     public int[][] inPlace(int[][] matrix) {

@@ -1,4 +1,4 @@
-package ch3_stacks_and_queues;
+package cci.ch3_stacks_and_queues;
 
 public class Queue<T> {
 	private class QueueNode {

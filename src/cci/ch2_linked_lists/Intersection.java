@@ -1,4 +1,4 @@
-package ch2_linked_lists;
+package cci.ch2_linked_lists;
 
 import java.util.HashSet;
 

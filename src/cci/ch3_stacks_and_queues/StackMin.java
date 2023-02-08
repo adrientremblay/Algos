@@ -1,4 +1,4 @@
-package ch3_stacks_and_queues;
+package cci.ch3_stacks_and_queues;
 
 /**
  * Identical to a stack but with the additional O(n) operation of 

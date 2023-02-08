@@ -1,4 +1,4 @@
-package ch1_arrays_and_strings;
+package cci.ch1_arrays_and_strings;
 
 public class StringRotation {
 	public boolean mySol(String s1, String s2) {

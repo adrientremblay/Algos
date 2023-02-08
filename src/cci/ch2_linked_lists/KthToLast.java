@@ -1,4 +1,4 @@
-package ch2_linked_lists;
+package cci.ch2_linked_lists;
 
 public class KthToLast {
 	public Node mySolution(Node head, int k) {

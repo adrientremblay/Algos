@@ -1,4 +1,4 @@
-package src.clrs.ch14_dynamic_programming;
+package clrs.ch14_dynamic_programming;
 
 /**
  *

@@ -1,4 +1,4 @@
-package ch1_arrays_and_strings;
+package cci.ch1_arrays_and_strings;
 
 public class CheckPermutation {
     public boolean arraySolution(String s1, String s2) {
