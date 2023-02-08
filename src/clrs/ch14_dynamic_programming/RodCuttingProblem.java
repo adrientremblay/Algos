@@ -1,6 +1,7 @@
 package clrs.ch14_dynamic_programming;
 
 import java.util.HashMap;
+import java.util.Timer;
 
 public class RodCuttingProblem {
 	public int naiveSolution(int prices[], int length) {
@@ -40,10 +41,19 @@ public class RodCuttingProblem {
 	public static void main(String args[]) {
 		RodCuttingProblem rcp = new RodCuttingProblem();
 		
-		int[] prices = {0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
+		int[] prices = {0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30, 31, 32, 33, 33, 33, 33, 33, 33, 33, 34};
 		
-		System.out.println(rcp.naiveSolution(prices, 4));
+		
+		long startTime, endTime;
+		
+		startTime = System.currentTimeMillis();
+		System.out.println(rcp.naiveSolution(prices, 15));
+		endTime = System.currentTimeMillis();
+		System.out.println("Time Elapsed: " + (endTime - startTime));
 
-		System.out.println(rcp.memoizedSolution(prices, 4));
+		startTime = System.currentTimeMillis();
+		System.out.println(rcp.memoizedSolution(prices, 15));
+		endTime = System.currentTimeMillis();
+		System.out.println("Time Elapsed: " + (endTime - startTime));
 	}
 }
