@@ -1,7 +1,7 @@
-package clrs.ch14_dynamic_programming;
+package src.clrs.ch14_dynamic_programming;
 
 public class LongestCommonSubsequence {
-    public int lcsLength(String s1, String s2) throws Exception {
+    public int bottomUpSolution(String s1, String s2) throws Exception {
         if (s1.length() != s2.length())
             throw new Exception("Strings must be of the same length");
 
@@ -23,7 +23,7 @@ public class LongestCommonSubsequence {
 
     public static void main(String args[]) throws Exception {
         LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
-        int longest = longestCommonSubsequence.lcsLength("100100111", "010101101");
+        int longest = longestCommonSubsequence.bottomUpSolution("100100111", "010101101");
         System.out.println(longest);
     }
 }
