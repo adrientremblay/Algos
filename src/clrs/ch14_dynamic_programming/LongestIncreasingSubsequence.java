@@ -1,5 +1,7 @@
 package src.clrs.ch14_dynamic_programming;
 
+import java.util.ArrayList;
+
 /**
  * This problem isn't in any version of CLRS ASFAIK, but it's a DP problem so I put it here
  */
@@ -21,7 +23,23 @@ public class LongestIncreasingSubsequence {
             longests[i]++;
         }
 
+        System.out.println(reconstructSubsequenceFromTable(subsequence, longests));
+
         return longests[n - 1];
+    }
+
+    public static String reconstructSubsequenceFromTable(int[] subsequence, int[] longests) {
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+
+        int cur = Integer.MAX_VALUE;
+        for (int i = longests.length - 1 ; i >= 0 ; i--) {
+            if (longests[i] < cur) {
+                ans.add(0, subsequence[i]);
+                cur = longests[i];
+            }
+        }
+
+        return ans.toString();
     }
 
     public static void main(String[] args) {
