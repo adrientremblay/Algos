@@ -1,4 +1,4 @@
-package clrs.ch14_dynamic_programming;
+package src.clrs.ch14_dynamic_programming;
 
 public class MatrixChainMultiplication {
 	public static int naiveTopDownSolution(int[][] matrices, int i, int j) {
@@ -119,6 +119,21 @@ public class MatrixChainMultiplication {
 		System.out.println(ans);
 		
 		printParenthesisLocations(parenthesisLocations, 0, 4);
+
+		int[][] sampleMatrix2 = {
+				{5, 10},
+				{10, 3},
+				{3, 12},
+				{12, 5},
+				{5, 50},
+				{50, 6},
+		};
+		int[][] history2 = new int[6][6];
+		int[][] parenthesisLocations2 = new int[6][6];
+		int ans2 = bottomUpSolution(sampleMatrix2, 6, history2, parenthesisLocations2);
+		System.out.println(ans2);
+
+		printParenthesisLocations(parenthesisLocations2, 0, 5);
 	}
 
 }
