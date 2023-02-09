@@ -10,6 +10,7 @@ public class LongestCommonSubsequence {
      * @return
      * @throws Exception
      */
+    // todo: make this work for strings of non-equal length
     public int bottomUpSolution(String s1, String s2) throws Exception {
         if (s1.length() != s2.length())
             throw new Exception("Strings must be of the same length");
@@ -35,7 +36,7 @@ public class LongestCommonSubsequence {
             }
         }
 
-        // printing longest common substring
+        // printing longest common substring using arrows matrix
         int i = n;
         int j = n;
 
@@ -55,12 +56,30 @@ public class LongestCommonSubsequence {
         }
         System.out.println(sb.reverse().toString());
 
+        // printing longest common substring without using the arrows matrix
+        i = n;
+        j = n;
+        sb = new StringBuilder();
+        while (i > 0 && j > 0)  {
+            if (s1.charAt(i-1) == s2.charAt(j-1)) {
+                sb.append(s1.charAt(i-1));
+                i--;
+                j--;
+            } else if (c[i-1][j] >= c[i][j-1]) {
+                i--;
+            } else {
+                j--;
+            }
+        }
+
+        System.out.println(sb.reverse().toString());
+
         return c[n][n];
     }
 
     public static void main(String args[]) throws Exception {
         LongestCommonSubsequence longestCommonSubsequence = new LongestCommonSubsequence();
         int longest = longestCommonSubsequence.bottomUpSolution("100100111", "010101101");
-        System.out.println(longest);
+        longestCommonSubsequence.bottomUpSolution("ABCBDA", "BDCABA");
     }
 }
