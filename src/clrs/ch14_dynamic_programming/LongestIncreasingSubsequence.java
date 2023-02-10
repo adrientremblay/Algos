@@ -7,15 +7,15 @@ import java.util.ArrayList;
  */
 public class LongestIncreasingSubsequence {
 
-    public static int tableSolution(int[] subsequence) {
-        int n = subsequence.length;
+    public static int tableSolution(int[] sequence) {
+        int n = sequence.length;
 
         // array of longest increasing subsequence possible with subsequence[i]
         int[] longests = new int[n];
 
         for (int i = 0 ; i < n; i++) {
             for (int j = i - 1 ; j >= 0 ; j--) {
-                if (subsequence[j] < subsequence[i]) {
+                if (sequence[j] < sequence[i]) {
                     longests[i] = longests[j];
                     break;
                 }
@@ -23,7 +23,7 @@ public class LongestIncreasingSubsequence {
             longests[i]++;
         }
 
-        System.out.println(reconstructSubsequenceFromTable(subsequence, longests));
+        System.out.println(reconstructSubsequenceFromTable(sequence, longests));
 
         return longests[n - 1];
     }
