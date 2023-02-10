@@ -54,8 +54,8 @@ public class ActivitySelectionProblem {
 
         List<Integer[]> largestSubset = greedySolution(activities);
 
-        for (Integer[] activty : largestSubset) {
-            System.out.println(activty[0] + " " + activty[1]);
+        for (Integer[] activity : largestSubset) {
+            System.out.println(activity[0] + " " + activity[1]);
         }
 
         /*
